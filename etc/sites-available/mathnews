@@ -1,0 +1,38 @@
+<VirtualHost *:80>
+	ServerName	mathnews.iterate.ca
+	ServerAlias	*.mathnews.iterate.ca mathnews2.uwaterloo.ca
+	ServerAdmin	administrator@azuresky.ca
+	DocumentRoot /var/www/mathnews.iterate.ca
+	<Directory />
+		Options FollowSymLinks
+		AllowOverride None
+	</Directory>
+	<Directory /var/www/mathnews.iterate.ca/>
+		Options Indexes FollowSymLinks MultiViews
+		AllowOverride None
+		Order allow,deny
+		allow from all
+	</Directory>
+
+	RewriteEngine on
+
+	ErrorLog /var/log/apache2/error.log
+
+	# Possible values include: debug, info, notice, warn, error, crit,
+	# alert, emerg.
+	LogLevel warn
+
+	CustomLog /var/log/apache2/access.log combined
+	
+	#RewriteEngine on
+	#RewriteRule ^(.+) https://mathnews.iterate.ca$1 [R,L]
+
+	Alias /static/ /var/www/mathnews.iterate.ca/static/
+
+	WSGIScriptAlias / /opt/mnps11/etc/mathnews.wsgi
+	<Directory /opt/mnps11/etc>
+		Order allow,deny
+		Allow from all
+	</Directory>
+
+</VirtualHost>
