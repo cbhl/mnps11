@@ -21,8 +21,8 @@ class Issue(models.Model):
     volume = models.IntegerField()
     issue = models.IntegerField()
     pub_date = models.DateTimeField('date published')
-    cover_image = models.ImageField('cover image', upload_to='images/covers/%Y/%m/%d')
-    cover_caption = models.CharField('cover caption', max_length=254)
+    cover_image = models.ImageField('cover image', upload_to='images/covers/%Y/%m/%d',blank=True)
+    cover_caption = models.CharField('cover caption', max_length=254,blank=True)
     def __unicode__(self):
         return self.slug;
 
