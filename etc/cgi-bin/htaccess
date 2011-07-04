@@ -1,0 +1,3 @@
+Require valid-user
+SetHandler cgi-script
+
