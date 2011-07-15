@@ -16,7 +16,7 @@ Dependencies
 - www.student.cs or some other PHP-CGI-enabled on-campus server which can do CAS authentication
 - django (development version)
     - clone from the [git mirror] [https://github.com/django/django]
-- django-cas
+- [django-cas] [http://code.google.com/p/django-cas/]
 
 
 ### Installing on Ubuntu Linux
