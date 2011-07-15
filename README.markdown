@@ -6,6 +6,8 @@ mathNEWS Production System Rewrite (2011)
 Dependencies
 ------------
 - django
+    - python-mysqldb
+    - Python Imaging Library
     - MySQL (sqlite3 might work, but it sucks for concurrency/scaling)
 - pandoc
 - [pyandoc] [https://github.com/cbhl/pyandoc] (python bindings for pandoc)
