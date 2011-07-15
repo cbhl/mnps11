@@ -23,10 +23,10 @@ Dependencies
 sudo apt-get install mysql-server python-mysqldb python-imaging pandoc python-lxml
 
 You will also need to install pyandoc, django, django-cas into Python's dist-packages:
-    1. git clone [https://github.com/django/django.git]
-    2. git clone [https://github.com/cbhl/pyandoc.git]
-    3. Create files named /usr/lib/python2.7/dist-packages/<package>.pth with the directory of the library
-    e.g. /opt/django for django
+1. git clone [https://github.com/django/django.git]
+2. git clone [https://github.com/cbhl/pyandoc.git]
+3. Create files named /usr/lib/python2.7/dist-packages/<package>.pth with the directory of the library
+e.g. /opt/django for django
 
 ### Installing on Mac OS X
 
