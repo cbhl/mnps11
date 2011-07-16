@@ -1,5 +1,6 @@
 from django.db import models
-from django.contrib.auth.models import User;
+from django.contrib.auth.models import User
+from django.conf import settings
 
 #class ArticleAdmin(admin.ModelAdmin):
 #    prepopulated_fields = {"slug": ("title",)}
@@ -16,6 +17,15 @@ class Article(models.Model):
 
     def clean(self):
         from django.core.exceptions import ValidationError
+        from StringIO import StringIO
+        from lxml import etree
+        import os
+        dtd_fh = open(settings.STATIC_ROOT + 'article.dtd');
+        dtd = etree.DTD(dtd_fh);
+        root = etree.XML(self.body);
+        if not dtd.validate(root):
+            raise ValidationError("Your article body is invalid mNmL: {0}".format(dtd.error_log))#.filter_from_errors()[0]))
+
         #if ((author is None) or (not author.is_authenticated()) or (not author.is_active)):
         #    raise ValidationError('Author is empty, inactive, or not authenticated.');
         pass

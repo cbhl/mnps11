@@ -1,0 +1,95 @@
+<!-- Standard Entities -->
+<!ENTITY lt    		"&#38;#60;"> 
+<!ENTITY gt    		"&#62;"> 
+<!ENTITY amp   		"&#38;#38;"> 
+<!ENTITY apos  		"&#39;"> 
+<!ENTITY quot  		"&#34;"> 
+
+<!-- mathNEWS Entities -->
+<!ENTITY mN    		"<special class='mN1'>math</special><special class='mN2'>NEWS</special>">
+<!ENTITY mNmL  		"<special class='mN1'>m</special><special class='mN2'>N</special>mL">
+<!ENTITY bb	        "<special class='BB'>BLACK BOX</special>">
+<!ENTITY gW    		"<special class='mN1'>grid</special><special class='mN2'>WORD</special>">
+<!ENTITY gC    		"<special class='mN1'>grid</special><special class='mN2'>COMMENTS</special>">
+<!ENTITY lA    		"<special class='mN1'>look</special><special class='mN2'>AHEAD</special>">
+<!ENTITY mH    		"<special class='mN1'>mast</special><special class='mN2'>HEAD</special>">
+<!ENTITY pQ    		"<special class='mN1'>prof</special><special class='mN2'>QUOTES</special>">
+<!ENTITY gN    		"<special class='mN1'>grad</special><special class='mN2'>NEWS</special>">
+<!ENTITY uC         "<special class='mN1'>ultra</special><special class='mN2'>CLASSIFIED</special>">
+<!ENTITY gQ         "<special class='mN1'>grid</special><special class='mN2'>QUESTION</special>">
+
+<!ENTITY st		"<sup>st</sup>">
+<!ENTITY nd		"<sup>nd</sup>">
+<!ENTITY rd		"<sup>rd</sup>">
+<!ENTITY th		"<sup>th</sup>">
+
+<!ENTITY % entities PUBLIC "mathNEWS//entities//EN"
+			   "http://www.mathnews.uwaterloo.ca/mNmL/entities">
+%entities;
+
+<!-- Alternate Names -->
+<!ENTITY ldots    "&hellip;">
+<!ENTITY ellipsis "&hellip;">
+
+<!-- Structure Classes -->
+<!ENTITY % font		"b|i|sans|tt|sup|sub|big|small|mn1|mn2">
+<!ENTITY % special	"email|url|editor">
+<!ENTITY % text		"(#PCDATA|%font;|%special;)*">
+
+<!-- The Structure -->
+<!ELEMENT article 	(hd|sh|p|sg|ol|ul|table|pre)*>
+<!ELEMENT hd		%text;>
+<!ELEMENT sh		%text;>
+<!ELEMENT sg		%text;>
+<!ELEMENT p 		(#PCDATA|%font;|%special;|sg)*>
+<!ELEMENT br 		EMPTY>
+<!ELEMENT ol		(li)+>
+<!ELEMENT ul		(li)+>
+<!ELEMENT li		%text;>
+<!ELEMENT pre		%text;>
+<!ELEMENT latex		%text;>
+
+<!-- Font Control -->
+<!ELEMENT b 		%text;>
+<!ELEMENT i 		%text;>
+<!ELEMENT sans		%text;>
+<!ELEMENT tt		%text;>
+<!ELEMENT sup 		%text;>
+<!ELEMENT sub 		%text;>
+<!ELEMENT big		%text;>
+<!ELEMENT small		%text;>
+<!ELEMENT special	%text;>
+<!ELEMENT u		%text;>
+
+<!-- Specials -->
+<!ELEMENT email		(#PCDATA)>
+<!ELEMENT url  		(#PCDATA)>
+<!ELEMENT editor	%text;>
+
+<!-- Tables -->
+<!ELEMENT table		(row)+>
+<!ELEMENT row		(cell)+>
+<!ELEMENT cell		%text;>
+
+<!-- Attributes -->
+<!ATTLIST cell
+	colspan		NMTOKEN				"1"
+	align		(left|right|centre|center)	#IMPLIED>
+<!ATTLIST row
+	lineabove	(none|thin|thick)		"none"
+	linebelow	(none|thin|thick)		"none">
+<!ATTLIST editor
+	name		CDATA				"Ed.">
+<!ATTLIST li
+	value		CDATA				#IMPLIED>
+<!ATTLIST p
+	align		(left|right|centre|center)	"left"
+	indent		(yes|no)			"yes">
+<!ATTLIST pre
+	xml:space	(default|preserve)		'preserve'>
+<!ATTLIST table
+	columns		NMTOKEN				#REQUIRED>
+<!ATTLIST ul
+	spacing		(single|double)			"double">
+<!ATTLIST ol
+	spacing		(single|double)			"double">
