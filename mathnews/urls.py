@@ -21,7 +21,9 @@ urlpatterns = patterns('',
 
     url(r'^NJpgWbgpQli1mCEhxctqv1ekQ52KX04E6gouTnMWzWNe6bM377kh6w87fmgczqH/', 'mathnews.prodsys.views.cas_hack'),
 
-    url(r'^production/$', 'mathnews.prodsys.views.cas_hack_init'),
+    url(r'^login_hack/$', 'mathnews.prodsys.views.cas_hack_init'),
+
+    url(r'^production/export/article/(?P<article_id>\d+)/$', 'mathnews.prodsys.views.export_article'),
     
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
