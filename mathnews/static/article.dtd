@@ -1,0 +1,497 @@
+<!-- This DTD has been modified from the original version by m9chang@uwaterloo.ca on 2011-07-16 to make it work with lxml.etree. -->
+
+<!-- Standard Entities -->
+<!ENTITY lt    		"&#38;#60;"> 
+<!ENTITY gt    		"&#62;"> 
+<!ENTITY amp   		"&#38;#38;"> 
+<!ENTITY apos  		"&#39;"> 
+<!ENTITY quot  		"&#34;"> 
+
+<!-- mathNEWS Entities -->
+<!ENTITY mN    		"<special class='mN1'>math</special><special class='mN2'>NEWS</special>">
+<!ENTITY mNmL  		"<special class='mN1'>m</special><special class='mN2'>N</special>mL">
+<!ENTITY bb	        "<special class='BB'>BLACK BOX</special>">
+<!ENTITY gW    		"<special class='mN1'>grid</special><special class='mN2'>WORD</special>">
+<!ENTITY gC    		"<special class='mN1'>grid</special><special class='mN2'>COMMENTS</special>">
+<!ENTITY lA    		"<special class='mN1'>look</special><special class='mN2'>AHEAD</special>">
+<!ENTITY mH    		"<special class='mN1'>mast</special><special class='mN2'>HEAD</special>">
+<!ENTITY pQ    		"<special class='mN1'>prof</special><special class='mN2'>QUOTES</special>">
+<!ENTITY gN    		"<special class='mN1'>grad</special><special class='mN2'>NEWS</special>">
+<!ENTITY uC         "<special class='mN1'>ultra</special><special class='mN2'>CLASSIFIED</special>">
+<!ENTITY gQ         "<special class='mN1'>grid</special><special class='mN2'>QUESTION</special>">
+
+<!ENTITY st		"<sup>st</sup>">
+<!ENTITY nd		"<sup>nd</sup>">
+<!ENTITY rd		"<sup>rd</sup>">
+<!ENTITY th		"<sup>th</sup>">
+
+<!-- Character entity definitions for mNmL -->
+
+<!-- Just because something is defined in here doesn't mean that it's going
+     to turn out right in the output.  If a character shows up as "?", you
+     need to add a definition to each of the symbols.xxx.sym files and
+     reconstruct the symbol files -->
+
+<!-- (C) International Organization for Standardization 1986
+     Permission to copy in any form is granted for use with
+     conforming SGML systems and applications as defined in
+     ISO 8879, provided this notice is included in all copies.
+-->
+ 
+    <!ENTITY Agrave  "&#192;" ><!-- capital A, grave accent -->
+    <!ENTITY Aacute  "&#193;" ><!-- capital A, acute accent -->
+    <!ENTITY Acirc   "&#194;" ><!-- capital A, circumflex accent -->
+    <!ENTITY Atilde  "&#195;" ><!-- capital A, tilde -->
+    <!ENTITY Auml    "&#196;" ><!-- capital A, dieresis or umlaut mark -->
+    <!ENTITY Aring   "&#197;" ><!-- capital A, ring -->
+    <!ENTITY AElig   "&#198;" ><!-- capital AE diphthong (ligature) -->
+    <!ENTITY Ccedil  "&#199;" ><!-- capital C, cedilla -->
+    <!ENTITY Egrave  "&#200;" ><!-- capital E, grave accent -->
+    <!ENTITY Eacute  "&#201;" ><!-- capital E, acute accent -->
+    <!ENTITY Ecirc   "&#202;" ><!-- capital E, circumflex accent -->
+    <!ENTITY Euml    "&#203;" ><!-- capital E, dieresis or umlaut mark -->
+    <!ENTITY Igrave  "&#204;" ><!-- capital I, grave accent -->
+    <!ENTITY Iacute  "&#205;" ><!-- capital I, acute accent -->
+    <!ENTITY Icirc   "&#206;" ><!-- capital I, circumflex accent -->
+    <!ENTITY Iuml    "&#207;" ><!-- capital I, dieresis or umlaut mark -->
+    <!ENTITY ETH     "&#208;" ><!-- capital Eth, Icelandic -->
+    <!ENTITY Ntilde  "&#209;" ><!-- capital N, tilde -->
+    <!ENTITY Ograve  "&#210;" ><!-- capital O, grave accent -->
+    <!ENTITY Oacute  "&#211;" ><!-- capital O, acute accent -->
+    <!ENTITY Ocirc   "&#212;" ><!-- capital O, circumflex accent -->
+    <!ENTITY Otilde  "&#213;" ><!-- capital O, tilde -->
+    <!ENTITY Ouml    "&#214;" ><!-- capital O, dieresis or umlaut mark -->
+    <!ENTITY Oslash  "&#216;" ><!-- capital O, slash -->
+    <!ENTITY Ugrave  "&#217;" ><!-- capital U, grave accent -->
+    <!ENTITY Uacute  "&#218;" ><!-- capital U, acute accent -->
+    <!ENTITY Ucirc   "&#219;" ><!-- capital U, circumflex accent -->
+    <!ENTITY Uuml    "&#220;" ><!-- capital U, dieresis or umlaut mark -->
+    <!ENTITY Yacute  "&#221;" ><!-- capital Y, acute accent -->
+    <!ENTITY THORN   "&#222;" ><!-- capital THORN, Icelandic -->
+    <!ENTITY szlig   "&#223;" ><!-- small sharp s, German (sz ligature) -->
+    <!ENTITY agrave  "&#224;" ><!-- small a, grave accent -->   
+    <!ENTITY aacute  "&#225;" ><!-- small a, acute accent -->
+    <!ENTITY acirc   "&#226;" ><!-- small a, circumflex accent -->
+    <!ENTITY atilde  "&#227;" ><!-- small a, tilde -->
+    <!ENTITY auml    "&#228;" ><!-- small a, dieresis or umlaut mark -->
+    <!ENTITY aring   "&#229;" ><!-- small a, ring -->
+    <!ENTITY aelig   "&#230;" ><!-- small ae diphthong (ligature) -->
+    <!ENTITY ccedil  "&#231;" ><!-- small c, cedilla -->
+    <!ENTITY egrave  "&#232;" ><!-- small e, grave accent -->
+    <!ENTITY eacute  "&#233;" ><!-- small e, acute accent -->
+    <!ENTITY ecirc   "&#234;" ><!-- small e, circumflex accent -->
+    <!ENTITY euml    "&#235;" ><!-- small e, dieresis or umlaut mark -->
+    <!ENTITY igrave  "&#236;" ><!-- small i, grave accent -->
+    <!ENTITY iacute  "&#237;" ><!-- small i, acute accent -->
+    <!ENTITY icirc   "&#238;" ><!-- small i, circumflex accent -->
+    <!ENTITY iuml    "&#239;" ><!-- small i, dieresis or umlaut mark -->
+    <!ENTITY eth     "&#240;" ><!-- small eth, Icelandic -->
+    <!ENTITY ntilde  "&#241;" ><!-- small n, tilde -->
+    <!ENTITY ograve  "&#242;" ><!-- small o, grave accent -->
+    <!ENTITY oacute  "&#243;" ><!-- small o, acute accent -->
+    <!ENTITY ocirc   "&#244;" ><!-- small o, circumflex accent -->
+    <!ENTITY otilde  "&#245;" ><!-- small o, tilde -->
+    <!ENTITY ouml    "&#246;" ><!-- small o, dieresis or umlaut mark -->
+
+    <!ENTITY oslash  "&#248;" ><!-- small o, slash -->
+    <!ENTITY ugrave  "&#249;" ><!-- small u, grave accent -->
+    <!ENTITY uacute  "&#250;" ><!-- small u, acute accent -->
+    <!ENTITY ucirc   "&#251;" ><!-- small u, circumflex accent -->
+    <!ENTITY uuml    "&#252;" ><!-- small u, dieresis or umlaut mark -->
+    <!ENTITY yacute  "&#253;" ><!-- small y, acute accent -->
+    <!ENTITY thorn   "&#254;" ><!-- small thorn, Icelandic -->
+    <!ENTITY yuml    "&#255;" ><!-- small y, dieresis or umlaut mark -->
+
+<!-- (C) International Organization for Standardization 1986
+     Permission to copy in any form is granted for use with
+     conforming SGML systems and applications as defined in
+     ISO 8879, provided this notice is included in all copies.
+-->
+
+<!ENTITY half   "&#189;" ><!--=fraction one-half-->
+<!ENTITY frac12 "&#189;" ><!--=fraction one-half-->
+<!ENTITY frac14 "&#188;" ><!--=fraction one-quarter-->
+<!ENTITY frac34 "&#190;" ><!--=fraction three-quarters-->
+<!ENTITY frac18 "&#x215B;" > 
+    <!-- or "&#xB1;&#x202;&#x2044;&#x2088;" --><!--=fraction one-eighth-->
+<!ENTITY frac38 "&#x215C;" >
+    <!-- or "&#xB3;&#x2044;&#x2088;" --><!--=fraction three-eighths-->
+<!ENTITY frac58 "&#x215D;" >
+    <!-- or "&#x2075;&#x2044;&#x2088;" --><!--=fraction five-eighths-->
+<!ENTITY frac78 "&#x215E;" >
+    <!-- or "&#x2077;&#x2044;&#x2088;" --><!--=fraction seven-eighths-->
+
+<!ENTITY sup1   "&#185;" ><!--=superscript one-->
+<!ENTITY sup2   "&#178;" ><!--=superscript two-->
+<!ENTITY sup3   "&#179;" ><!--=superscript three-->
+
+<!ENTITY plus   "+" ><!--=plus sign B:-->
+<!ENTITY plusmn "&#xB1;" ><!--/pm B: =plus-or-minus sign-->
+<!ENTITY lt     "<"      ><!--=less-than sign R:-->
+<!ENTITY equals "="      ><!--=equals sign R:-->
+<!ENTITY gt     ">"      ><!--=greater-than sign R:-->
+<!ENTITY divide "&#247;" ><!--/div B: =divide sign-->
+<!ENTITY times  "&#215;" ><!--/times B: =multiply sign-->
+
+<!ENTITY curren "&#164;" ><!--=general currency sign-->
+<!ENTITY pound  "&#165;" ><!--=pound sign-->
+<!ENTITY dollar "$"      ><!--=dollar sign-->
+<!ENTITY cent   "&#162;" ><!--=cent sign-->
+<!ENTITY yen    "&#165;" ><!--/yen =yen sign-->
+
+<!ENTITY num    "#" ><!--=number sign-->
+<!ENTITY percnt "&#37;" ><!--=percent sign-->
+<!ENTITY amp    "&#38;" ><!--=ampersand-->
+<!ENTITY ast    "*" ><!--/ast B: =asterisk-->
+<!ENTITY commat "@" ><!--=commercial at-->
+<!ENTITY lsqb   "[" ><!--/lbrack O: =left square bracket-->
+<!ENTITY bsol   "\\" ><!--/backslash =reverse solidus-->
+<!ENTITY rsqb   "]" ><!--/rbrack C: =right square bracket-->
+<!ENTITY lcub   "{" ><!--/lbrace O: =left curly bracket-->
+<!ENTITY horbar "&#x2015;" ><!--=horizontal bar-->
+<!ENTITY verbar "|" ><!--/vert =vertical bar-->
+<!ENTITY rcub   "}" ><!--/rbrace C: =right curly bracket-->
+<!ENTITY micro  "&#181;" ><!--=micro sign-->
+<!ENTITY ohm    "&#2126;" ><!--=ohm sign-->
+<!ENTITY deg    "&#176;" ><!--=degree sign-->
+<!ENTITY ordm   "&#186;" ><!--=ordinal indicator, masculine-->
+<!ENTITY ordf   "&#170;" ><!--=ordinal indicator, feminine-->
+<!ENTITY sect   "&#167;" ><!--=section sign-->
+<!ENTITY para   "&#182;" ><!--=pilcrow (paragraph sign)-->
+<!ENTITY middot "&#183;" ><!--/centerdot B: =middle dot-->
+<!ENTITY larr   "&#x2190;" ><!--/leftarrow /gets A: =leftward arrow-->
+<!ENTITY rarr   "&#x2192;" ><!--/rightarrow /to A: =rightward arrow-->
+<!ENTITY uarr   "&#x2191;" ><!--/uparrow A: =upward arrow-->
+<!ENTITY darr   "&#x2193;" ><!--/downarrow A: =downward arrow-->
+<!ENTITY copy   "&#169;" ><!--=copyright sign-->
+<!ENTITY reg    "&#174;" ><!--/circledR =registered sign-->
+<!ENTITY trade  "&#8482;" ><!--=trade mark sign-->
+<!ENTITY brvbar "&#xA6;" ><!--=bren (vertical) bar-->
+<!ENTITY not    "&#xAC;" ><!--/neg /lnot =not sign-->
+<!ENTITY sung   "&#x266A;" ><!--=music note (sung text sign)-->
+
+<!ENTITY excl   "!" ><!--=exclamation mark-->
+<!ENTITY iexcl  "&#xA1;" ><!--=inverted exclamation mark-->
+<!ENTITY quot   '"' ><!--=quotation mark-->
+<!ENTITY apos   "'" ><!--=apostrophe-->
+<!ENTITY lpar   "(" ><!--O: =left parenthesis-->
+<!ENTITY rpar   ")" ><!--C: =right parenthesis-->
+<!ENTITY comma  "," ><!--P: =comma-->
+<!ENTITY lowbar "_" ><!--=low line-->
+<!ENTITY hyphen "&#x2010;" ><!--=hyphen-->
+<!ENTITY period "." ><!--=full stop, period-->
+<!ENTITY sol    "/" ><!--=solidus-->
+<!ENTITY colon  ":" ><!--/colon P:-->
+<!ENTITY semi   ";" ><!--=semicolon P:-->
+<!ENTITY quest  "?" ><!--=question mark-->
+<!ENTITY iquest "&#xBF;" ><!--=inverted question mark-->
+<!ENTITY laquo  "&#x2039;" ><!--=angle quotation mark, left
+ But note that Unicode 1 & Maler & el Andaloussi give &#xAB; -->
+<!ENTITY raquo  "&#x203A;" ><!--=angle quotation mark, right
+ But note that Unicode 1 & Maler & el Andaloussi give &#xBB; -->
+<!ENTITY lsquo  "&#x2018;" ><!--=single quotation mark, left-->
+<!ENTITY rsquo  "&#x2019;" ><!--=single quotation mark, right-->
+<!ENTITY ldquo  "&#x201C;" ><!--=double quotation mark, left-->
+<!ENTITY rdquo  "&#x201D;" ><!--=double quotation mark, right-->
+<!ENTITY nbsp   "&#160;" ><!--=no break (required) space-->
+<!ENTITY shy    "&#173;" ><!--=soft hyphen-->
+
+<!-- (C) International Organization for Standardization 1986
+     Permission to copy in any form is granted for use with
+     conforming SGML systems and applications as defined in
+     ISO 8879, provided this notice is included in all copies.
+-->
+
+<!ENTITY emsp   "&#x2003;" ><!--=em space-->
+<!ENTITY ensp   "&#x2002;" ><!--=en space (1/2-em)-->
+<!ENTITY emsp13 "&#x2004;" ><!--=1/3-em space-->
+<!ENTITY emsp14 "&#x2005;" ><!--=1/4-em space-->
+<!ENTITY numsp  "&#x2007;" ><!--=digit space (width of a number)-->
+<!ENTITY puncsp "&#x2008;" ><!--=punctuation space (width of comma)-->
+<!ENTITY thinsp "&#x2009;" ><!--=thin space (1/6-em)-->
+<!ENTITY hairsp "&#x200A;" ><!--=hair space-->
+<!ENTITY mdash  "&#x2014;" ><!--=em dash-->
+<!ENTITY ndash  "&#x2013;" ><!--=en dash-->
+<!ENTITY dash   "&#x2010;" ><!--=hyphen (true graphic)-->
+<!ENTITY blank  "&#x2423;" ><!--=significant blank symbol-->
+<!ENTITY hellip "&#x2026;" ><!--=ellipsis (horizontal)-->
+<!ENTITY nldr   "&#x2025;" ><!--=double baseline dot (en leader)-->
+<!ENTITY frac13 "&#x2153;" ><!--=fraction one-third-->
+<!ENTITY frac23 "&#x2154;" ><!--=fraction two-thirds-->
+<!ENTITY frac15 "&#x2155;" ><!--=fraction one-fifth-->
+<!ENTITY frac25 "&#x2156;" ><!--=fraction two-fifths-->
+<!ENTITY frac35 "&#x2157;" ><!--=fraction three-fifths-->
+<!ENTITY frac45 "&#x2158;" ><!--=fraction four-fifths-->
+<!ENTITY frac16 "&#x2159;" ><!--=fraction one-sixth-->
+<!ENTITY frac56 "&#x215a;" ><!--=fraction five-sixths-->
+<!ENTITY incare "&#x2105;" ><!--=in-care-of symbol-->
+<!ENTITY block  "&#x2588;" ><!--=full block-->
+<!ENTITY uhblk  "&#x2580;" ><!--=upper half block-->
+<!ENTITY lhblk  "&#x2584;" ><!--=lower half block-->
+<!ENTITY blk14  "&#x2591;" ><!--=25% shaded block-->
+<!ENTITY blk12  "&#x2592;" ><!--=50% shaded block-->
+<!ENTITY blk34  "&#x2593;" ><!--=75% shaded block-->
+<!ENTITY marker "&#x25AE;" ><!--=histogram marker-->
+<!ENTITY cir    "&#x25CB;" ><!--/circ B: =circle, open-->
+<!ENTITY squ    "&#x25A1;" ><!--=square, open-->
+<!ENTITY rect   "&#x25AD;" ><!--=rectangle, open-->
+<!ENTITY utri   "&#x25B5;" ><!--/triangle =up triangle, open-->
+<!ENTITY dtri   "&#x25BF;" ><!--/triangledown =down triangle, open-->
+<!ENTITY star   "&#x2606;" ><!--=star, open-->
+<!ENTITY bull   "&#x2022;" ><!--/bullet B: =round bullet, filled-->
+<!ENTITY squf   "&#x25AA;" ><!--/blacksquare =sq bullet, filled-->
+<!ENTITY utrif  "&#x25B4;" ><!--/blacktriangle =up tri, filled-->
+<!ENTITY dtrif  "&#x25BE;" ><!--/blacktriangledown =dn tri, filled-->
+<!ENTITY ltrif  "&#x25C2;" ><!--/blacktriangleleft R: =l tri, filled-->
+<!ENTITY rtrif  "&#x25B8;" ><!--/blacktriangleright R: =r tri, filled-->
+<!ENTITY clubs  "&#x2663;" ><!--/clubsuit =club suit symbol-->
+<!ENTITY diams  "&#x2662;" ><!--/diamondsuit =diamond suit symbol-->
+<!ENTITY hearts "&#x2661;" ><!--/heartsuit =heart suit symbol-->
+<!ENTITY spades "&#x2660;" ><!--/spadesuit =spades suit symbol-->
+<!ENTITY malt   "&#x2720;" ><!--/maltese =maltese cross-->
+<!ENTITY dagger "&#x2020;" ><!--/dagger B: =dagger-->
+<!ENTITY Dagger "&#x2021;" ><!--/ddagger B: =double dagger-->
+<!ENTITY check  "&#x2713;" ><!--/checkmark =tick, check mark-->
+<!ENTITY cross  "&#x2717;" ><!--=ballot cross-->
+<!ENTITY sharp  "&#x266F;" ><!--/sharp =musical sharp-->
+<!ENTITY flat   "&#x266D;" ><!--/flat =musical flat-->
+<!ENTITY male   "&#x2642;" ><!--=male symbol-->
+<!ENTITY female "&#x2640;" ><!--=female symbol-->
+<!ENTITY phone  "&#x26E0;" ><!--=telephone symbol-->
+<!ENTITY telrec "&#x2315;" ><!--=telephone recorder symbol-->
+<!ENTITY copysr "&#x2117;" ><!--=sound recording copyright sign-->
+<!ENTITY caret  "&#x2041;" ><!--=caret (insertion mark)-->
+<!ENTITY lsquor "&#x201A;" ><!--=rising single quote, left (low)-->
+<!ENTITY ldquor "&#x201E;" ><!--=rising dbl quote, left (low)-->
+
+<!ENTITY fflig  "&#xFB00;" ><!--small ff ligature-->
+<!ENTITY filig  "&#xFB01;" ><!--small fi ligature-->
+<!ENTITY fjlig  "fj" ><!--small fj ligature-->
+<!ENTITY ffilig "&#xFB03;" ><!--small ffi ligature-->
+<!ENTITY ffllig "&#xFB04;" ><!--small ffl ligature-->
+<!ENTITY fllig  "&#xFB02;" ><!--small fl ligature-->
+
+<!ENTITY mldr   "&#x2025;" ><!--em leader-->
+<!ENTITY rdquor "&#x201D;" ><!--rising dbl quote, right (high)-->
+<!ENTITY rsquor "&#x2019;" ><!--rising single quote, right (high)-->
+<!ENTITY vellip "&#x22EE;" ><!--vertical ellipsis-->
+
+<!ENTITY hybull "&#x2043;" ><!--rectangle, filled (hyphen bullet)-->
+<!ENTITY loz    "&#x2727;" ><!--/lozenge - lozenge or total mark-->
+<!ENTITY lozf   "&#x2726;" ><!--/blacklozenge - lozenge, filled-->
+<!ENTITY ltri   "&#x25C3;" ><!--/triangleleft B: l triangle, open-->
+<!ENTITY rtri   "&#x25B9;" ><!--/triangleright B: r triangle, open-->
+<!ENTITY starf  "&#x2605;" ><!--/bigstar - star, filled-->
+
+<!ENTITY natur  "&#x266E;" ><!--/natural - music natural-->
+<!ENTITY rx     "&#x211E;" ><!--pharmaceutical prescription (Rx)-->
+<!ENTITY sext   "&#x2736;" ><!--sextile (6-pointed star)-->
+
+<!ENTITY target "&#x2316;" ><!--register mark or target-->
+<!ENTITY dlcrop "&#x230D;" ><!--downward left crop mark -->
+<!ENTITY drcrop "&#x230C;" ><!--downward right crop mark -->
+<!ENTITY ulcrop "&#x230F;" ><!--upward left crop mark -->
+<!ENTITY urcrop "&#x230E;" ><!--upward right crop mark -->
+
+
+<!-- (C) International Organization for Standardization 1986
+     Permission to copy in any form is granted for use with
+     conforming SGML systems and applications as defined in
+     ISO 8879, provided this notice is included in all copies.
+-->
+
+<!ENTITY aleph  "&#x2135;" ><!--/aleph =aleph, Hebrew-->
+<!ENTITY and    "&#x2227;" ><!--/wedge /land B: =logical and-->
+<!ENTITY ang90  "&#x221F;" ><!--=right (90 degree) angle-->
+<!ENTITY angsph "&#x2222;" ><!--/sphericalangle =angle-spherical-->
+<!ENTITY ap     "&#x2249;" ><!--/approx R: =approximate-->
+<!ENTITY becaus "&#x2235;" ><!--/because R: =because-->
+<!ENTITY bottom "&#x22A5;" ><!--/bot B: =perpendicular-->
+<!ENTITY cap    "&#x2229;" ><!--/cap B: =intersection-->
+<!ENTITY cong   "&#x2245;" ><!--/cong R: =congruent with-->
+<!ENTITY conint "&#x222E;" ><!--/oint L: =contour integral operator-->
+<!ENTITY cup    "&#x222A;" ><!--/cup B: =union or logical sum-->
+<!ENTITY equiv  "&#x2261;" ><!--/equiv R: =identical with-->
+<!ENTITY exist  "&#x2203;" ><!--/exists =at least one exists-->
+<!ENTITY forall "&#x2200;" ><!--/forall =for all-->
+<!ENTITY fnof   "&#x192;" ><!--=function of (italic small f)-->
+<!ENTITY ge     "&#x2265;" ><!--/geq /ge R: =greater-than-or-equal-->
+<!ENTITY iff    "&#x21D4;" ><!--/iff =if and only if-->
+<!ENTITY infin  "&#x221E;" ><!--/infty =infinity-->
+<!ENTITY int    "&#x222B;" ><!--/int L: =integral operator-->
+<!ENTITY isin   "&#x2208;" ><!--/in R: =set membership-->
+<!ENTITY lang   "&#x2329;" ><!--/langle O: =left angle bracket-->
+<!ENTITY lArr   "&#x21D0;" ><!--/Leftarrow A: =is implied by-->
+<!ENTITY le     "&#x2264;" ><!--/leq /le R: =less-than-or-equal-->
+<!ENTITY minus  "-" ><!--B: =minus sign-->
+<!ENTITY mnplus "&#x2213;" ><!--/mp B: =minus-or-plus sign-->
+<!ENTITY nabla  "&#x2207;" ><!--/nabla =del, Hamilton operator-->
+<!ENTITY ne     "&#x2260;" ><!--/ne /neq R: =not equal-->
+<!ENTITY ni     "&#x220B;" ><!--/ni /owns R: =contains-->
+<!ENTITY or     "&#x2228;" ><!--/vee /lor B: =logical or-->
+<!ENTITY par    "&#x2225;" ><!--/parallel R: =parallel-->
+<!ENTITY part   "&#x2202;" ><!--/partial =partial differential-->
+<!ENTITY permil "&#x2030;" ><!--=per thousand-->
+<!ENTITY perp   "&#x22A5;" ><!--/perp R: =perpendicular-->
+<!ENTITY prime  "&#x2032;" ><!--/prime =prime or minute-->
+<!ENTITY Prime  "&#x2033;" ><!--=double prime or second-->
+<!ENTITY prop   "&#x221D;" ><!--/propto R: =is proportional to-->
+<!ENTITY radic  "&#x221A;" ><!--/surd =radical-->
+<!ENTITY rang   "&#x232A;" ><!--/rangle C: =right angle bracket-->
+<!ENTITY rArr   "&#x21D2;" ><!--/Rightarrow A: =implies-->
+<!ENTITY sim    "&#x223C;" ><!--/sim R: =similar-->
+<!ENTITY sime   "&#x2243;" ><!--/simeq R: =similar, equals-->
+<!ENTITY square "&#x25A1;" ><!--/square B: =square-->
+<!ENTITY sub    "&#x2282;" ><!--/subset R: =subset or is implied by-->
+<!ENTITY sube   "&#x2286;" ><!--/subseteq R: =subset, equals-->
+<!ENTITY sup    "&#x2283;" ><!--/supset R: =superset or implies-->
+<!ENTITY supe   "&#x2287;" ><!--/supseteq R: =superset, equals-->
+<!ENTITY there4 "&#x2234;" ><!--/therefore R: =therefore-->
+<!ENTITY Verbar "&#x2016;" ><!--/Vert =dbl vertical bar-->
+
+<!ENTITY angst  "&#x212B;" ><!--Angstrom =capital A, ring-->
+<!ENTITY bernou "&#x212C;" ><!--Bernoulli function (script capital B)-->
+<!ENTITY compfn "&#x2218;" ><!--B: composite function (small circle)-->
+<!ENTITY Dot    "&#xA8;" ><!--=dieresis or umlaut mark-->
+<!ENTITY DotDot "&#x20DC;" ><!--four dots above-->
+<!ENTITY hamilt "&#x210B;" ><!--Hamiltonian (script capital H)-->
+<!ENTITY lagran "&#x2112;" ><!--Lagrangian (script capital L)-->
+<!ENTITY lowast "&#x2217;" ><!--low asterisk-->
+<!ENTITY notin  "&#x2209;" ><!--N: negated set membership-->
+<!ENTITY order  "&#x2134;" ><!--order of (script small o)-->
+<!ENTITY phmmat "&#x2133;" ><!--physics M-matrix (script capital M)-->
+<!ENTITY tdot   "&#x20DB;" ><!--three dots above-->
+<!ENTITY tprime "&#x2034;" ><!--triple prime-->
+<!ENTITY wedgeq "&#x2259;" ><!--R: corresponds to (wedge, equals)-->
+
+<!-- Symbolic Greek -->
+<!-- I don't use the ISO set verbatim here because I think it's broken -->
+<!ENTITY alpha    "&#x3B1;">
+<!ENTITY Alpha    "&#x391;">
+<!ENTITY beta     "&#x3B2;">
+<!ENTITY Beta     "&#x392;">
+<!ENTITY gamma    "&#x3B3;">
+<!ENTITY Gamma    "&#x393;">
+<!ENTITY gammad   "&#x3DC;">
+<!ENTITY delta    "&#x3B4;">
+<!ENTITY Delta    "&#x394;">
+<!ENTITY epsilon  "&#x3B5;">
+<!ENTITY varepsilon "&#x2107;">
+<!ENTITY Epsilon  "&#x395;">
+<!ENTITY epsi     "&#x3B5;">
+<!ENTITY epsiv    "&#x2107;">
+<!ENTITY epsis    "&#x1B8;">
+<!ENTITY Epsi     "&#x395;">
+<!ENTITY zeta     "&#x3B6;">
+<!ENTITY Zeta     "&#x396;">
+<!ENTITY eta      "&#x3B7;">
+<!ENTITY Eta      "&#x397;">
+<!ENTITY thetas   "&#x3B8;">
+<!ENTITY Theta    "&#x398;">
+<!ENTITY thetav   "&#x3D1;">
+<!ENTITY iota     "&#x3B9;">
+<!ENTITY Iota     "&#x399;">
+<!ENTITY kappa    "&#x3BA;">
+<!ENTITY kappav   "&#x3F0;">
+<!ENTITY Kappa    "&#x39A;">
+<!ENTITY lambda   "&#x3BB;">
+<!ENTITY Lambda   "&#x39B;">
+<!ENTITY mu       "&#x3BC;">
+<!ENTITY Mu       "&#x39C;">
+<!ENTITY nu       "&#x3BD;">
+<!ENTITY Nu       "&#x39D;">
+<!ENTITY xi       "&#x3BE;">
+<!ENTITY Xi       "&#x39E;">
+<!ENTITY omicron  "&#x3BF;">
+<!ENTITY Omicron  "&#x39F;">
+<!ENTITY pi       "&#x3C0;">
+<!ENTITY piv      "&#x3D6;">
+<!ENTITY Pi       "&#x3A0;">
+<!ENTITY rho      "&#x3c1;">
+<!ENTITY rhov     "&#x3F1;">
+<!ENTITY Rho      "&#x3a1;">
+<!ENTITY sigma    "&#x3C3;">
+<!ENTITY Sigma    "&#x3A3;">
+<!ENTITY sigmav   "&#x3C2;">
+<!ENTITY tau      "&#x3C4;">
+<!ENTITY Tau      "&#x3A4;">
+<!ENTITY upsilon  "&#x3C5;">
+<!ENTITY Upsilon  "&#x3A5;">
+<!ENTITY upsi     "&#x3C5;">
+<!ENTITY Upsi     "&#x3A5;">
+<!ENTITY phis     "&#x3C6;">
+<!ENTITY Phi      "&#x3A6;">
+<!ENTITY phiv     "&#x3D5;">
+<!ENTITY chi      "&#x3C7;">
+<!ENTITY Chi      "&#x3A7;">
+<!ENTITY psi      "&#x3C8;">
+<!ENTITY Psi      "&#x3A8;">
+<!ENTITY omega    "&#x3C9;">
+<!ENTITY Omega    "&#x3A9;">
+
+<!-- Alternate Names -->
+<!ENTITY ldots    "&hellip;">
+<!ENTITY ellipsis "&hellip;">
+
+<!-- Structure Classes -->
+<!ENTITY % font		"b|i|sans|tt|sup|sub|big|small|mn1|mn2">
+<!ENTITY % special	"email|url|editor">
+<!ENTITY % text		"(#PCDATA|%font;|%special;)*">
+
+<!-- The Structure -->
+<!ELEMENT article 	(hd|sh|p|sg|ol|ul|table|pre)*>
+<!ELEMENT hd		%text;>
+<!ELEMENT sh		%text;>
+<!ELEMENT sg		%text;>
+<!ELEMENT p 		(#PCDATA|%font;|%special;|sg)*>
+<!ELEMENT br 		EMPTY>
+<!ELEMENT ol		(li)+>
+<!ELEMENT ul		(li)+>
+<!ELEMENT li		%text;>
+<!ELEMENT pre		%text;>
+<!ELEMENT latex		%text;>
+
+<!-- Font Control -->
+<!ELEMENT b 		%text;>
+<!ELEMENT i 		%text;>
+<!ELEMENT sans		%text;>
+<!ELEMENT tt		%text;>
+<!ELEMENT sup 		%text;>
+<!ELEMENT sub 		%text;>
+<!ELEMENT big		%text;>
+<!ELEMENT small		%text;>
+<!ELEMENT special	%text;>
+<!ELEMENT u		%text;>
+
+<!-- Specials -->
+<!ELEMENT email		(#PCDATA)>
+<!ELEMENT url  		(#PCDATA)>
+<!ELEMENT editor	%text;>
+
+<!-- Tables -->
+<!ELEMENT table		(row)+>
+<!ELEMENT row		(cell)+>
+<!ELEMENT cell		%text;>
+
+<!-- Attributes -->
+<!ATTLIST cell
+	colspan		NMTOKEN				"1"
+	align		(left|right|centre|center)	#IMPLIED>
+<!ATTLIST row
+	lineabove	(none|thin|thick)		"none"
+	linebelow	(none|thin|thick)		"none">
+<!ATTLIST editor
+	name		CDATA				"Ed.">
+<!ATTLIST li
+	value		CDATA				#IMPLIED>
+<!ATTLIST p
+	align		(left|right|centre|center)	"left"
+	indent		(yes|no)			"yes">
+<!ATTLIST pre
+	xml:space	(default|preserve)		'preserve'>
+<!ATTLIST table
+	columns		NMTOKEN				#REQUIRED>
+<!ATTLIST ul
+	spacing		(single|double)			"double">
+<!ATTLIST ol
+	spacing		(single|double)			"double">

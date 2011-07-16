@@ -1,0 +1,88 @@
+<!-- Character entity definitions for mNmL -->
+
+<!-- Just because something is defined in here doesn't mean that it's going
+     to turn out right in the output.  If a character shows up as "?", you
+     need to add a definition to each of the symbols.xxx.sym files and
+     reconstruct the symbol files -->
+
+<!ENTITY % ISOlat1 PUBLIC
+  "ISO 8879-1986//ENTITIES Added Latin 1//EN//XML"
+  "http://www.mathnews.uwaterloo.ca/mNmL/ISO/ISOlat1.pen">
+%ISOlat1;
+<!ENTITY % ISOnum PUBLIC
+  "ISO 8879:1986//ENTITIES Numeric and Special Graphic//EN//XML"
+  "http://www.mathnews.uwaterloo.ca/mNmL/ISO/ISOnum.pen">
+%ISOnum;
+<!ENTITY % ISOpub PUBLIC
+  "ISO 8879:1986//ENTITIES Publishing//EN//XML"
+  "http://www.mathnews.uwaterloo.ca/mNmL/ISO/ISOpub.pen">
+%ISOpub;
+<!ENTITY % ISOtech PUBLIC
+  "ISO 8879:1986//ENTITIES General Technical//EN//XML" 
+  "http://www.mathnews.uwaterloo.ca/mNmL/ISO/ISOtech.pen">
+%ISOtech;
+
+<!-- Symbolic Greek -->
+<!-- I don't use the ISO set verbatim here because I think it's broken -->
+<!ENTITY alpha    "&#x3B1;">
+<!ENTITY Alpha    "&#x391;">
+<!ENTITY beta     "&#x3B2;">
+<!ENTITY Beta     "&#x392;">
+<!ENTITY gamma    "&#x3B3;">
+<!ENTITY Gamma    "&#x393;">
+<!ENTITY gammad   "&#x3DC;">
+<!ENTITY delta    "&#x3B4;">
+<!ENTITY Delta    "&#x394;">
+<!ENTITY epsilon  "&#x3B5;">
+<!ENTITY varepsilon "&#x2107;">
+<!ENTITY Epsilon  "&#x395;">
+<!ENTITY epsi     "&#x3B5;">
+<!ENTITY epsiv    "&#x2107;">
+<!ENTITY epsis    "&#x1B8;">
+<!ENTITY Epsi     "&#x395;">
+<!ENTITY zeta     "&#x3B6;">
+<!ENTITY Zeta     "&#x396;">
+<!ENTITY eta      "&#x3B7;">
+<!ENTITY Eta      "&#x397;">
+<!ENTITY thetas   "&#x3B8;">
+<!ENTITY Theta    "&#x398;">
+<!ENTITY thetav   "&#x3D1;">
+<!ENTITY iota     "&#x3B9;">
+<!ENTITY Iota     "&#x399;">
+<!ENTITY kappa    "&#x3BA;">
+<!ENTITY kappav   "&#x3F0;">
+<!ENTITY Kappa    "&#x39A;">
+<!ENTITY lambda   "&#x3BB;">
+<!ENTITY Lambda   "&#x39B;">
+<!ENTITY mu       "&#x3BC;">
+<!ENTITY Mu       "&#x39C;">
+<!ENTITY nu       "&#x3BD;">
+<!ENTITY Nu       "&#x39D;">
+<!ENTITY xi       "&#x3BE;">
+<!ENTITY Xi       "&#x39E;">
+<!ENTITY omicron  "&#x3BF;">
+<!ENTITY Omicron  "&#x39F;">
+<!ENTITY pi       "&#x3C0;">
+<!ENTITY piv      "&#x3D6;">
+<!ENTITY Pi       "&#x3A0;">
+<!ENTITY rho      "&#x3c1;">
+<!ENTITY rhov     "&#x3F1;">
+<!ENTITY Rho      "&#x3a1;">
+<!ENTITY sigma    "&#x3C3;">
+<!ENTITY Sigma    "&#x3A3;">
+<!ENTITY sigmav   "&#x3C2;">
+<!ENTITY tau      "&#x3C4;">
+<!ENTITY Tau      "&#x3A4;">
+<!ENTITY upsilon  "&#x3C5;">
+<!ENTITY Upsilon  "&#x3A5;">
+<!ENTITY upsi     "&#x3C5;">
+<!ENTITY Upsi     "&#x3A5;">
+<!ENTITY phis     "&#x3C6;">
+<!ENTITY Phi      "&#x3A6;">
+<!ENTITY phiv     "&#x3D5;">
+<!ENTITY chi      "&#x3C7;">
+<!ENTITY Chi      "&#x3A7;">
+<!ENTITY psi      "&#x3C8;">
+<!ENTITY Psi      "&#x3A8;">
+<!ENTITY omega    "&#x3C9;">
+<!ENTITY Omega    "&#x3A9;">

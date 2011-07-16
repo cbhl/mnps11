@@ -43,6 +43,7 @@ Setting up dev environment
 - Create MySQL user (see settings.py for username/password)
 - Create *'mathnews_dev'* table in database
 - python manage.py syncdb
+- python manage.py collectstatic
 - python manage.py runserver
 
 git branching conventions
