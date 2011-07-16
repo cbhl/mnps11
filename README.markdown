@@ -44,3 +44,9 @@ Setting up dev environment
 - Create *'mathnews_dev'* table in database
 - python manage.py syncdb
 - python manage.py runserver
+
+git branching conventions
+---------------
+We will be following nvie's Git branching model [http://nvie.com/posts/a-successful-git-branching-model/]. To make your life easier, use his pluging git-flow [https://github.com/nvie/gitflow].
+
+For a quick introduction, see "Why aren't you using git-flow?" [http://jeffkreeftmeijer.com/2010/why-arent-you-using-git-flow/].
