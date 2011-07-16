@@ -21,7 +21,7 @@ urlpatterns = patterns('',
 
     url(r'^NJpgWbgpQli1mCEhxctqv1ekQ52KX04E6gouTnMWzWNe6bM377kh6w87fmgczqH/', 'mathnews.prodsys.views.cas_hack'),
 
-    url(r'^production/$', 'mathnews.prodsys.views.cas_hack_init'),
+    url(r'^login_hack/$', 'mathnews.prodsys.views.cas_hack_init'),
     
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
