@@ -174,8 +174,8 @@
 <!ENTITY iexcl  "&#xA1;" ><!--=inverted exclamation mark-->
 <!ENTITY quot   '"' ><!--=quotation mark-->
 <!ENTITY apos   "'" ><!--=apostrophe-->
-<!ENTITY lpar   "(" ><!--O: =left parenthesis-->
-<!ENTITY rpar   ")" ><!--C: =right parenthesis-->
+<!-- ENTITY lpar   "(" --><!--O: =left parenthesis-->
+<!-- ENTITY rpar   ")" --><!--C: =right parenthesis-->
 <!ENTITY comma  "," ><!--P: =comma-->
 <!ENTITY lowbar "_" ><!--=low line-->
 <!ENTITY hyphen "&#x2010;" ><!--=hyphen-->
@@ -435,7 +435,7 @@
 
 <!-- Structure Classes -->
 <!ENTITY % font		"b|i|sans|tt|sup|sub|big|small|mn1|mn2">
-<!ENTITY % special	"email|url|editor">
+<!ENTITY % special	"email|url|editor|special">
 <!ENTITY % text		"(#PCDATA|%font;|%special;)*">
 
 <!-- The Structure -->
@@ -483,6 +483,9 @@
 <!ATTLIST editor
 	name		CDATA				"Ed.">
 <!ATTLIST li
+	value		CDATA				#IMPLIED>
+<!ATTLIST special
+    class       (mN1|mN2|BB)        "mN1"
 	value		CDATA				#IMPLIED>
 <!ATTLIST p
 	align		(left|right|centre|center)	"left"
